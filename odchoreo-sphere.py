@@ -150,7 +150,7 @@ time.sleep(1)
 variables = {}
 params = {
     'speed': 100, 'acc': 2000, 
-    'angle_speed': 10, #170, 
+    'angle_speed': 5, #10, #170, # on display
     'angle_acc': 1145, 
     'events': {}, 'variables': variables, 
     'callback_in_thread': True, 'quit': False
@@ -241,7 +241,8 @@ while True:
             print("current position (xArm): {}".format(arm.position))
 
             rotation = random.uniform(-110, 110)
-            elevation = random.uniform(-30, 60)
+            #elevation = random.uniform(-30, 60) # on-display 2022
+            elevation = random.uniform(0, 60) # on-display 2022
             extension = random.uniform(-50, 300)
             deltapitch = random.uniform(-90, 90)
 
